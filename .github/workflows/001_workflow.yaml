@@ -1,0 +1,13 @@
+name: Call other workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call another workflow
+        uses: https://github.com/siwonpawel/action_callable@master
+        with:
+          example_input: 'Hello from first workflow!'
