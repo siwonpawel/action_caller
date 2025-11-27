@@ -4,10 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-workflow:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Call another workflow
-        uses: siwonpawel/action_callable/.github/workflows/001_workflow.yaml@master
-        with:
-          example_input: 'Hello from first workflow!'
+  preliminary-staging:
+    uses: siwonpawel/action_callable/.github/workflows/001_workflow.yaml@master
+    with:
+      example_input: 'Hello from first workflow!'
